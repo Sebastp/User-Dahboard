@@ -18,13 +18,15 @@ TODO;
 -  Meta tags
 
 
+
 Boostrap grid on the frontend.
 I used only functional components for the sake of todays trends in react.
 Although class components are still valid way to write a react component,
 whole community is moving to functional comps and since facebook introuduced
 useState in 16.8 ver of react you can write statefull functionals thus allowing us
 to create whole project without using classes + code looks cleaner + improved performance
-
+For real dashboard app like this, I'd probably use Gatsby to utilize its lazy loading features as well
+CMS packages.
 
 Tests:
 I used Jest for unit testing. I only tested in/out data. Usually, I don't test UI with jest because
