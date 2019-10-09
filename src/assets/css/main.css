@@ -118,6 +118,13 @@ body {
   min-height: 100vh;
   margin: 0 auto; }
 
+.verticalHr {
+  background-color: #eeefee;
+  width: 2px;
+  height: 100%;
+  display: inline-block;
+  margin: auto; }
+
 .cont-width_0 {
   margin: auto;
   padding: 0px 40px;
