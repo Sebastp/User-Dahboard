@@ -1,0 +1,21 @@
+.sansButton__1{
+  display: inline-block;
+  font-family: $poppins;
+  text-transform: uppercase;
+  font-weight: $medium;
+  // font-weight: $regular;
+  // color: rgba($black, 0.5);
+  color: rgba($white, 0.9);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  // font-size: 0.875rem;
+  transition: color 0.3s;
+  padding: 10px 35px;
+  background-color: $brand1;
+  border-radius: 4px;
+
+  &:hover{
+    color: $white;
+    transition: color 0.3s;
+  }
+}
