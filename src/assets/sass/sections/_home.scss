@@ -1,15 +1,56 @@
+.boardCont{
+  margin-top: 130px;
+  position: relative;
+
+  .boardCol{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+
+
+
+  .verticalHr{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+
 // =====================================================
 //    MEDIA QUERIES
 // =====================================================
 
-
-
-
+@media (min-width: 992px) {
+  .rightPadding{
+    padding-right: 70px;
+  }
+  .leftPadding{
+    padding-left: 70px;
+  }
+}
 
 // Medium
 @media (min-width: 768px) {}
 // Large
-@media (max-width: 992px) {}
+@media (max-width: 992px) {
+  .boardCont{
+    max-width: 600px;
+    margin: auto;
+    margin-top: 70px;
+
+    .verticalHr{
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 2px;
+      margin: 70px auto;
+    }
+  }
+}
 // Extra large
 @media (max-width: 1225px) {
 }

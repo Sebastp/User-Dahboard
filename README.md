@@ -18,6 +18,10 @@ TODO;
 -  Meta tags
 
 
+I wanted to create something very simple and clean for the sake of information readability
+which would be the main purpose of the page like this. There are definitely more things to work on eg. animation
+but I didn't want to overdo it - I already spend more time on it then it was assigned.
+
 
 Boostrap grid on the frontend.
 I used only functional components for the sake of todays trends in react.
