@@ -1,3 +1,17 @@
+.btn-text{
+  display: inline-block;
+  font-family: $poppins;
+  font-size: 17px;
+  font-weight: $medium;
+  color: rgba($dark1, 0.4);
+  transition: color 0.2s;
+
+  &:hover{
+    color: rgba($dark1, 0.55);
+    transition: color 0.3s;
+  }
+}
+
 .sansButton__1{
   display: inline-block;
   font-family: $poppins;

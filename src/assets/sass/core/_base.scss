@@ -49,6 +49,19 @@ body {
 
 
 
+.componentHeader{
+  font-family: $poppins;
+  font-size: 28px;
+  font-weight: $medium;
+}
+
+.section-title{
+  margin-bottom: 40px;
+
+  span{
+    color: $grey3;
+  }
+}
 
 
 // =====================================================

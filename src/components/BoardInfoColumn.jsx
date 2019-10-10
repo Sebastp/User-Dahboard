@@ -11,7 +11,7 @@ const BoardInfoColumn = ({children, infoArray, title, links}) => {
 
   return(
     <div className='boardCol'>
-      <h2 className='boardCol-title'>
+      <h2 className='section-title componentHeader'>
         {titleFirstWord} <span>{titleRest}</span>
       </h2>
 
@@ -56,9 +56,9 @@ const BoardInfoColumn = ({children, infoArray, title, links}) => {
                 break;
                 default:
                   linkContent = (
-                    <Link className="boardCol-url boardCol-urlLabel" to={value} key={i}>
+                    <a className="boardCol-url boardCol-urlLabel" target="_blank" href={'https://'+value} key={i}>
                       <span>{name}</span>
-                    </Link>
+                    </a>
                   )
               }
 

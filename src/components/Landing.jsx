@@ -1,6 +1,8 @@
 import React, { useState, useEffect, Fragment} from 'react'
 import {Link} from 'react-router-dom'
 
+import logosArr from '../helpers/logos'
+import fetchDataFromApi from '../helpers/dataFetching'
 
 import BoardInfoColumn from './BoardInfoColumn'
 
@@ -11,31 +13,9 @@ const Landing = (props) => {
 
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users/1')
-    .then(response => response.json())
+    fetchDataFromApi('https://jsonplaceholder.typicode.com/users/1')
     .then(data => {
-      var userData = {
-        'infoArray': [
-          {'name': 'Email address', 'value': data['email']},
-          {'name': 'Phone number', 'value': data['phone']}
-        ]
-      }
-
-      var companyData = {
-        'infoArray': [
-          {'name': 'Name', 'value': data['company']['name']},
-          {'name': 'Catch phrase', 'value': data['company']['catchPhrase']}
-        ],
-        'links': [
-          {'name': data['website'], 'value': data['website']},
-          {'name': 'twitter', 'value': '/'},
-          {'name': 'facebook', 'value': '/'}
-        ]
-      }
-
-      let updatedData = {...data, userData, companyData}
-
-      setBoardData(updatedData)
+      setBoardData(data)
       setBoardLoading(false)
     })
     .catch(error => setError(true));
@@ -62,6 +42,33 @@ const Landing = (props) => {
           )}
         </div>
       </ul>
+
+      <div className="logosCont">
+        <div className="logosCont-header">
+          <h2 className='section-title componentHeader'>
+            Avaliable <span>logos</span>
+          </h2>
+
+          <button className="btn-text">
+            Upload New
+          </button>
+        </div>
+
+        <div className="logosCont-content">
+          <ul className="row">
+            {
+              logosArr.map((logoObj, i)=>(
+                <li className="col-3">
+                  <div className="logosCont-liInner">
+                    <img src={logoObj.url} className="boardCol-avatar" alt="logo image"/>
+                  </div>
+                </li>
+              ))
+            }
+          </ul>
+          <div className="logosCont-content-bck"/>
+        </div>
+      </div>
     </div>
   )
 }
