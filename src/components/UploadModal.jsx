@@ -29,6 +29,7 @@ const UploadModal = () => {
     if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
       let dragedFile = e.dataTransfer.files[0]
 
+      //validate uploaded file
       validateFile(dragedFile)
       .then(fileObj => {
         setUploadedImage(fileObj)
@@ -40,6 +41,8 @@ const UploadModal = () => {
     }
   }
 
+  //on 'upload' button click
+  //adds new image to global logosArr state from LogosContext
   const uploadImage = () => {
     if (uploadedImage) {
       addToLogosList(uploadedImage.src)

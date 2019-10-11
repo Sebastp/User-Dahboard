@@ -13,7 +13,6 @@ export const LogosProvider = ({children}) =>{
 
   const addToLogosList = (newLogo) => {
     logosArr.push({'url':newLogo})
-    console.log(logosArr);
     setLogosArr(logosArr);
   }
 

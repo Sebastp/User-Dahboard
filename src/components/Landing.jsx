@@ -9,7 +9,7 @@ import { LogosContext } from './LogosContext';
 
 
 
-const Landing = (props) => {
+const Landing = () => {
   const [error, setError] = useState(false),
         [boardLoading, setBoardLoading] = useState(true), // TODO: loading animation if board data not loaded
         [boardData, setBoardData] = useState({}),
@@ -63,7 +63,7 @@ const Landing = (props) => {
           <ul className="row">
             {
               logosArr.map((logoObj, i)=>(
-                <li className="col-3" key={i}>
+                <li className="col-12 col-sm-6 col-md-4 col-lg-3" key={i}>
                   <div className="logosCont-liInner">
                     <img src={logoObj.url} className="logosCont-logoimg" alt="logo image"/>
                   </div>

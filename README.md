@@ -11,14 +11,15 @@ Launches the jest test runner, you can see the outcome in your cli
 
 
 TODO;
--  Save uploaded logo file
+-  Save uploaded logo file XX
 -  Loading landing screen XX
 -  Loading logo images animation
--  Loading file upload
+-  Loading file upload progress
 -  Meta tags
 -  Navbar change active animation of green dash
 -  If on mobile = choose from files instead drag and drop
-
+-  Error msg in case api returns nothing
+-  Api data validation
 
 I wanted to create something very simple and clean for the sake of information readability
 which would be the main purpose of the page like this. There are definitely more things to work on eg. animation

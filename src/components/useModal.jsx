@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+
+//not used - decided to go with context apis
 const useModal = () => {
   const [isShowing, setIsShowing] = useState(true);
 

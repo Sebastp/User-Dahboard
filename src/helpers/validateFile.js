@@ -1,6 +1,7 @@
 /**
   @param {file} dragedFile - file to validate
-  @returns {String} array of objects
+  @returns {Promise} when rejected it gives {String}error message to show
+  when resolved gives {object}file data
 */
 const validateFile = (dragedFile) => {
   return new Promise((resolve, reject) => {
