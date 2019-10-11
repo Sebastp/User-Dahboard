@@ -28,7 +28,7 @@ TODO;
 -  Favicon and <head> SEO stuff...
 
 
-Design;
+## Design
 I wanted to create something very simple and clean for the sake of information readability
 which would be the main purpose of the page like this. There are definitely more things to work on eg. animation
 but I didn't want to overdo it - I already spend more time on it then it was assigned.
@@ -36,7 +36,7 @@ but I didn't want to overdo it - I already spend more time on it then it was ass
 
 
 
-Architecture;
+## Architecture
 I used only functional components for the sake of today's trends in react.
 Although class components are still a valid way to write a react component,
 the whole community is moving to functional comps and since facebook introduced
@@ -53,7 +53,7 @@ Boostrap with Scss grid on the frontend.
 
 
 
-Testing;
+## Testing
 I used Jest for unit testing. I only tested in/out data. Usually, I don't test UI with jest because
 I don't really see the point... maybe with more sophisticated UI, it would be helpful but not for something
 like that. I only test UI in terms of visual performance, responsivity and cross-browser esthetics on different
@@ -61,5 +61,5 @@ devices.
 
 
 Code quality;
-  SCSS - Bem Methodologie
-  JS - eslint-prettier modified Airbnb Style Guide
+SCSS - Bem Methodologie
+JS - eslint-prettier modified Airbnb Style Guide
