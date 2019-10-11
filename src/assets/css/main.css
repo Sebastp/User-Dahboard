@@ -151,12 +151,14 @@ body {
   font-size: 17px;
   font-weight: 500;
   color: rgba(0, 10, 30, 0.4);
-  transition: color 0.2s; }
+  transition: color 0.2s;
+  white-space: nowrap; }
   .btn-text:hover {
     color: rgba(0, 10, 30, 0.55);
     transition: color 0.3s; }
 
 .btn-full {
+  white-space: nowrap;
   display: inline-block;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
@@ -180,78 +182,12 @@ body {
   .btn-full.inactive {
     cursor: default;
     box-shadow: none;
-    filter: grayscale(0.9); }
+    background-color: #26e592;
+    color: rgba(255, 255, 255, 0.95);
+    filter: grayscale(0.9);
+    opacity: 0.8; }
     .btn-full.inactive:hover {
       box-shadow: none; }
-
-.modalCont {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 400;
-  height: 100%;
-  width: 100%; }
-  .modalCont-inner {
-    height: 100%; }
-    .modalCont-inner__padding {
-      position: relative;
-      height: 100%;
-      width: 100%; }
-  .modalCont-box {
-    background-color: #ffffff;
-    margin: auto;
-    display: block;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    padding: 80px 60px 60px 60px;
-    border-radius: 5px;
-    box-shadow: 2px 5px 12px 0px rgba(0, 10, 30, 0.03);
-    text-align: center; }
-    .modalCont-box .componentHeader {
-      margin-bottom: 50px; }
-    .modalCont-box .modalCont-mid {
-      position: relative;
-      border: 2px dashed rgba(196, 198, 200, 0.4);
-      border-radius: 6px;
-      overflow: hidden;
-      margin-bottom: 30px; }
-      .modalCont-box .modalCont-mid .modalCont-droparea .file-drop-target {
-        padding-top: 100px;
-        padding-bottom: 100px;
-        font-family: "Poppins", sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        color: rgba(0, 10, 30, 0.2);
-        background-color: #fdfcfd;
-        transition: background-color 0.3s; }
-        .modalCont-box .modalCont-mid .modalCont-droparea .file-drop-target.file-drop-dragging-over-frame {
-          background-color: rgba(196, 198, 200, 0.2);
-          transition: background-color 0.3s; }
-        .modalCont-box .modalCont-mid .modalCont-droparea .file-drop-target.file-drop-dragging-over-target {
-          background-color: rgba(196, 198, 200, 0.5);
-          transition: background-color 0.2s; }
-    .modalCont-box .subMsg, .modalCont-box .errorMsg {
-      margin-bottom: 50px;
-      display: block;
-      font-family: "Poppins", sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      color: rgba(0, 10, 30, 0.3); }
-    .modalCont-box .errorMsg {
-      color: rgba(255, 0, 0, 0.55);
-      margin-bottom: 40px;
-      margin-top: -30px; }
-  .modalCont .bck {
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    bottom: 0;
-    width: 100vw;
-    height: 100%;
-    background-color: rgba(238, 239, 238, 0.4); }
 
 .boardCol {
   width: 100%;
@@ -618,6 +554,75 @@ footer {
   .loadingScreen-logobox .logobox__text {
     margin-left: 18px;
     height: 19px; } }
+
+.modalCont {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 400;
+  height: 100%;
+  width: 100%; }
+  .modalCont-inner {
+    height: 100%; }
+    .modalCont-inner__padding {
+      position: relative;
+      height: 100%;
+      width: 100%; }
+  .modalCont-box {
+    background-color: #ffffff;
+    margin: auto;
+    display: block;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    padding: 80px 60px 60px 60px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 12px 0px rgba(0, 10, 30, 0.03);
+    text-align: center; }
+    .modalCont-box .componentHeader {
+      margin-bottom: 50px; }
+    .modalCont-box .modalCont-mid {
+      position: relative;
+      border: 2px dashed rgba(196, 198, 200, 0.4);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 30px; }
+      .modalCont-box .modalCont-mid .modalCont-droparea .file-drop-target {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgba(0, 10, 30, 0.2);
+        background-color: #fdfcfd;
+        transition: background-color 0.3s; }
+        .modalCont-box .modalCont-mid .modalCont-droparea .file-drop-target.file-drop-dragging-over-frame {
+          background-color: rgba(196, 198, 200, 0.2);
+          transition: background-color 0.3s; }
+        .modalCont-box .modalCont-mid .modalCont-droparea .file-drop-target.file-drop-dragging-over-target {
+          background-color: rgba(196, 198, 200, 0.5);
+          transition: background-color 0.2s; }
+    .modalCont-box .subMsg, .modalCont-box .errorMsg {
+      margin-bottom: 50px;
+      display: block;
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(0, 10, 30, 0.3); }
+    .modalCont-box .errorMsg {
+      color: rgba(255, 0, 0, 0.55);
+      margin-bottom: 40px;
+      margin-top: -30px; }
+  .modalCont .bck {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    bottom: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(238, 239, 238, 0.4); }
 
 .topbar__padding {
   padding-top: 35px;

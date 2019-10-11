@@ -1,9 +1,106 @@
+.modalCont{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 400;
+  height: 100%;
+  width: 100%;
+
+
+  &-inner{
+    height: 100%;
+
+    &__padding{
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &-box{
+    background-color: $white;
+    margin: auto;
+    display: block;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    padding: 80px 60px 60px 60px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 12px 0px rgba($dark1, 0.03);
+    text-align: center;
+
+    .componentHeader{
+      margin-bottom: 50px;
+    }
+
+    .modalCont-mid{
+      position: relative;
+      border: 2px dashed rgba($grey3, 0.4);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 30px;
+
+      .modalCont-droparea{
+
+        .file-drop-target{
+          padding-top: 100px;
+          padding-bottom: 100px;
+
+          font-family: $poppins;
+          font-size: 16px;
+          font-weight: $medium;
+          color: rgba($dark1, 0.2);
+          background-color: $grey4;
+          transition: background-color 0.3s;
+
+          &.file-drop-dragging-over-frame{
+            background-color: rgba($grey3, 0.2);
+            transition: background-color 0.3s;
+          }
+
+          &.file-drop-dragging-over-target{
+            background-color: rgba($grey3, 0.5);
+            transition: background-color 0.2s;
+          }
+        }
+      }
+    }
+
+    .subMsg{
+      margin-bottom: 50px;
+      display: block;
+      font-family: $poppins;
+      font-size: 14px;
+      font-weight: $medium;
+      color: rgba($dark1, 0.3);
+    }
+
+    .errorMsg{
+      @extend .subMsg;
+      color: rgba(red, 0.55);
+      margin-bottom: 40px;
+      margin-top: -30px;
+    }
+  }
+
+  .bck{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    bottom: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba($grey2, 0.4);
+  }
+}
+
+
+
 // =====================================================
 //    MEDIA QUERIES
 // =====================================================
-
-
-
 
 
 // Medium

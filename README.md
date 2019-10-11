@@ -13,13 +13,16 @@ Launches the jest test runner, you can see the outcome in your cli
 TODO;
 -  Save uploaded logo file XX
 -  Loading landing screen XX
+-  Text on different browsers/devices XX
 -  Loading logo images animation
 -  Loading file upload progress
+-  Add 'X' on modal
 -  Meta tags
 -  Navbar change active animation of green dash
 -  If on mobile = choose from files instead drag and drop
 -  Error msg in case api returns nothing
 -  Api data validation
+-  Fav icon and <head> SEO stuff...
 
 I wanted to create something very simple and clean for the sake of information readability
 which would be the main purpose of the page like this. There are definitely more things to work on eg. animation
@@ -40,8 +43,8 @@ CMS packages.
 
 Tests:
 I used Jest for unit testing. I only tested in/out data. Usually, I don't test UI with jest because
-I don't really see the point... maybe with more sophisticated UI it would be helpful but for something
-like that, I only test UI in terms of visual performance, responsivity and cross-browser esthetics on different
+I don't really see the point... maybe with more sophisticated UI it would be helpful but not for something
+like that. I only test UI in terms of visual performance, responsivity and cross-browser esthetics on different
 devices.
 
 

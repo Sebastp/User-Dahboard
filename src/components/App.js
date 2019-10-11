@@ -17,7 +17,7 @@ import { LogosProvider } from './LogosContext';
 const App = () => (
   <Router>
     <Fragment>
-      {/*<LoadingScreen/>*/}
+      <LoadingScreen/>
       <ModalProvider>
         <LogosProvider>
           <UploadModal/>
