@@ -12,16 +12,21 @@ Launches the jest test runner, you can see the outcome in your cli
 
 TODO;
 -  Save uploaded logo file
--  Loading landing screen
+-  Loading landing screen XX
 -  Loading logo images animation
 -  Loading file upload
 -  Meta tags
+-  Navbar change active animation of green dash
+-  If on mobile = choose from files instead drag and drop
 
 
 I wanted to create something very simple and clean for the sake of information readability
 which would be the main purpose of the page like this. There are definitely more things to work on eg. animation
 but I didn't want to overdo it - I already spend more time on it then it was assigned.
 
+
+I thought about using custom useModal hook for the sake of readability, but it wouldn't be very pragmatic
+and with context API we can prevent Prop Drilling
 
 Boostrap grid on the frontend.
 I used only functional components for the sake of todays trends in react.

@@ -12,24 +12,36 @@
   }
 }
 
-.sansButton__1{
+.btn-full{
   display: inline-block;
   font-family: $poppins;
   text-transform: uppercase;
   font-weight: $medium;
-  // font-weight: $regular;
-  // color: rgba($black, 0.5);
-  color: rgba($white, 0.9);
-  font-size: 0.8125rem;
+  font-weight: $semi-bold;
+  color: rgba($white, 0.95);
+  letter-spacing: 0.025em;
+  font-size: 14px;
   cursor: pointer;
-  // font-size: 0.875rem;
   transition: color 0.3s;
-  padding: 10px 35px;
-  background-color: $brand1;
+  padding: 14px 40px 12px 40px;
+  background-color: $brand1__light;
   border-radius: 4px;
+  box-shadow: 0px 4px 9px 0px rgba($brand1, 0.3);
+  transition: color 0.3s, box-shadow .45s, background-color .45s;
 
   &:hover{
+    box-shadow: 0px 5px 10px 0px rgba($brand1, 0.5);
+    background-color: $brand1;
     color: $white;
-    transition: color 0.3s;
+    transition: color 0.3s, box-shadow .45s, background-color .45s;
+  }
+
+  &.inactive{
+    cursor: default;
+    box-shadow: none;
+    filter: grayscale(0.9);
+    &:hover{
+      box-shadow: none;
+    }
   }
 }

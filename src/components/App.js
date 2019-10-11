@@ -9,24 +9,34 @@ import Topbar from './Topbar'
 import LoadingScreen from './LoadingScreen'
 import UploadModal from './UploadModal'
 
+import { ModalProvider } from './ModalContext';
+import { LogosProvider } from './LogosContext';
+
 
 
 const App = () => (
   <Router>
     <Fragment>
-      <LoadingScreen/>
-      <Topbar/>
+      {/*<LoadingScreen/>*/}
+      <ModalProvider>
+        <LogosProvider>
+          <UploadModal/>
 
-      <Switch>
-        <Route exact path="/"
-          component={props => (
-            <Landing {...props}/>
-          )}
-        />
-      </Switch>
+          <Topbar/>
+
+          <Switch>
+            <Route exact path="/"
+              component={props => (
+                <Landing {...props}/>
+              )}
+              />
+          </Switch>
+        </LogosProvider>
+      </ModalProvider>
     </Fragment>
   </Router>
 )
+
 
 
 

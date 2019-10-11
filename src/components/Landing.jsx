@@ -1,16 +1,20 @@
-import React, { useState, useEffect, Fragment} from 'react'
-import {Link} from 'react-router-dom'
+import React, { useState, useContext, useEffect, Fragment} from 'react'
 
 import logosArr from '../helpers/logos'
 import fetchDataFromApi from '../helpers/dataFetching'
 
 import BoardInfoColumn from './BoardInfoColumn'
+import { ModalContext } from './ModalContext';
+import { LogosContext } from './LogosContext';
+
+
 
 const Landing = (props) => {
   const [error, setError] = useState(false),
-        [boardLoading, setBoardLoading] = useState(true),
-        [boardData, setBoardData] = useState({})
-
+        [boardLoading, setBoardLoading] = useState(true), // TODO: loading animation if board data not loaded
+        [boardData, setBoardData] = useState({}),
+        {toggle, isShowing} = useContext(ModalContext),
+        {logosArr} = useContext(LogosContext)
 
   useEffect(() => {
     fetchDataFromApi('https://jsonplaceholder.typicode.com/users/1')
@@ -49,7 +53,8 @@ const Landing = (props) => {
             Avaliable <span>logos</span>
           </h2>
 
-          <button className="btn-text">
+
+          <button className="btn-text" onClick={toggle} id={isShowing+''}>
             Upload New
           </button>
         </div>
@@ -58,9 +63,9 @@ const Landing = (props) => {
           <ul className="row">
             {
               logosArr.map((logoObj, i)=>(
-                <li className="col-3">
+                <li className="col-3" key={i}>
                   <div className="logosCont-liInner">
-                    <img src={logoObj.url} className="boardCol-avatar" alt="logo image"/>
+                    <img src={logoObj.url} className="logosCont-logoimg" alt="logo image"/>
                   </div>
                 </li>
               ))
